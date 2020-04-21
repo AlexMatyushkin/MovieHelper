@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SearchMoviesView.swift
 //  MovieHelper
 //
 //  Created by 17503583 on 21.04.2020.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SearchMoviesView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text("You can find movies here")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SearchMoviesView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SearchMoviesView()
     }
 }
