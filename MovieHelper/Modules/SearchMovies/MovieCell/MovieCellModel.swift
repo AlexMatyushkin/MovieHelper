@@ -13,6 +13,7 @@ class MovieCellModel: ObservableObject {
     @Published var image: UIImage = UIImage()
     @Published var title: String = ""
     @Published var overview: String = ""
+    @Published var rate: String = ""
     
     let apiService = APIService()
     var subsribers = Set<AnyCancellable>()
@@ -42,6 +43,9 @@ class MovieCellModel: ObservableObject {
         if let overview = movie.overview {
             self.overview = overview
         }
+        
+        self.rate = String(movie.voteAverage)
+        
     }
 }
 

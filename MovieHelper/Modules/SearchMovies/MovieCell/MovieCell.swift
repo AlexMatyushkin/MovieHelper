@@ -24,6 +24,7 @@ struct MovieCell: View {
                         .frame(width: 150, height: 200, alignment: .center)
                     Spacer()
                 }
+                Text("Рейтинг: \(model.rate)")
                 if model.overview != "" {
                     Text("Краткое описание").fontWeight(.bold)
                     Text(model.overview)
