@@ -2,7 +2,7 @@
 //  MainView.swift
 //  MovieHelper
 //
-//  Created by 17503583 on 21.04.2020.
+//  Created by Aleksey Matyushkin on 21.04.2020.
 //  Copyright © 2020 Aleksey Matyushkin. All rights reserved.
 //
 
@@ -13,12 +13,15 @@ struct MainView: View {
         TabView {
             SearchMoviesView()
                 .tabItem {
-                    Text("Search Movies")
+                    VStack{
+                        Text("Movies")
+                    }
+                    
             }
             
             Text("Search actors")
                 .tabItem {
-                    Text("Search actors")
+                    Text("Actors")
             }
         }
     }
