@@ -13,10 +13,11 @@ struct MovieCell: View {
     @ObservedObject var model: MovieCellModel
     
     var body: some View {
-       VStack{
+        VStack{
             Text(model.title)
-                .fontWeight(.semibold)
+                .font(Font.custom("SFProText-Bold", size: 20))
                 .multilineTextAlignment(.center)
+            
             VStack{
                 HStack{
                     Spacer()
@@ -24,14 +25,29 @@ struct MovieCell: View {
                         .frame(width: 150, height: 200, alignment: .center)
                     Spacer()
                 }
-                Text("Рейтинг: \(model.rate)")
+                
+                Text(model.raleaseDate ?? "")
+                
+                HStack {
+                    Text("Рейтинг: \(model.rate)")
+                        .fontWeight(.medium)
+                        .foregroundColor(model.rateColor)
+                    
+                    Image(model.imageRateName ?? "")
+                }
+                .padding([.top, .bottom], 16)
+                
                 if model.overview != "" {
                     Text("Краткое описание").fontWeight(.bold)
+                        .padding([.top, .bottom], 16)
                     Text(model.overview)
+                    
                 }
                 
             }
+            
         }
+        
     }
     
     init(movie: Movie?) {
